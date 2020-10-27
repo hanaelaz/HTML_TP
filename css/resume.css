@@ -1,0 +1,46 @@
+html, button, input, select, textarea {
+	color:#444;
+
+}
+html { font-size: 1em;
+line-height: 1.4;}
+
+#wrapper {
+background-color: #0022;
+   max-height: 950px;
+	min-width: 320px;
+	margin-left: auto;
+	margin-right: auto;	
+	display: block;
+}
+
+body{
+	background-color: #0022;
+	display: block;
+}
+h1{
+	font-family: 'arial', serif;
+}
+
+header #right-item{
+	float: right;
+}
+header #left-item{
+	float: left;
+
+}
+img {
+	width:250px;
+	border: solid 1px;
+	border-color: #ccc;
+	border-radius: 3px;
+	background-color: #fff;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.2); 
+
+}
+
+/*#nom{
+    font-family: sloop-script-one, sans-serif;
+font-style: normal;
+font-weight: 400;
+}*/
