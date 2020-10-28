@@ -6,7 +6,7 @@ html { font-size: 1em;
 line-height: 1.4;}
 
 #wrapper {
-background-color: #0022;
+background-color: #fff;
    max-height: 950px;
 	min-width: 320px;
 	margin-left: auto;
@@ -15,7 +15,7 @@ background-color: #0022;
 }
 
 body{
-	background-color: #0022;
+	background-color: #ededed;
 	display: block;
 }
 h1{
@@ -38,7 +38,168 @@ img {
 	box-shadow: 0px 2px 4px rgba(0,0,0,0.2); 
 
 }
+p{
+    font-size: 1em;
+    line-height: 1.5em;
+    text-decoration: none;
+    color:darkslategrey;
+}
 
+header {
+    border-bottom: 2px solid #fff;
+    height: 220px;
+    padding-left: 20px;
+    margin-right: auto;
+    background-color: #E8F6F3;
+}
+header h1{
+    margin: auto;
+    font-size: 1.5em;
+    color:darkslategray;
+    width: 90%;
+}
+#description{
+    margin: auto;
+    font-size: 1.5em;
+    color:darkslategray;
+    width: 90%;
+}
+header p{
+    margin: auto;
+    font-size: 1.5em;
+    width: 90%;
+    
+}
+footer{
+    border-top: 2px solid #fff;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: #ccc;
+
+}
+footer h4{
+    width: 90%;
+    margin: 0 auto;
+    color: darkslategray;
+}
+footer a{
+    color:black;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+h2{
+    margin: 10px 0;
+    width: 90%;
+}
+.contact-flex{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+section {
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px #bbb;
+    background-color: #fff;
+}
+section h2{
+    margin: 20px 0;
+    width:90%;
+}
+section h3{
+    margin: 20px 0;
+    width:90%;
+        font-size: 1.2em;
+
+}
+section > div {
+    width: 90%;
+}
+.exp{
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.exp-info{
+    flex-flow: column wrap;
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+.exp-info, .exp-desc{
+    margin-left: auto;
+    flex: 0 0 85%;
+}
+.exp h3{
+    font-size: 1.2em;
+}
+.exp h4{
+    font-size: 1em;
+    font-weight: normal;
+}
+.comp{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 10px;
+}
+.comp p{
+    flex: 0 0 40%;
+}
+
+.barre{
+    display: block;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.c70{
+    width: 70%;
+    background-color: #4B8;
+}
+.c80{
+    width: 80%;
+    background-color: #4B8;
+}
+.c90{
+    width: 90%;
+    background-color: #4B8;
+}
+.c95{
+    width: 95%;
+    background-color: #4B8;
+}
+
+.comp2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.conteneur-barre2{
+    flex: 0 0 100%;
+    height: 0.5em;
+    margin-bottom: 0.25em;
+    border-radius: 5px;
+    background-color: grey;
+}
+
+.exp1{
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    
+}
+.exp3{
+    margin-left: auto;
+    flex: 0 0 85%;
+}
 /*#nom{
     font-family: sloop-script-one, sans-serif;
 font-style: normal;
