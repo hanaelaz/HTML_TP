@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-<link rel="stylesheet" href="css/resume.css"/>
+<link rel="stylesheet" href="css/resumeJS.css"/>
 <link rel="stylesheet" href="css/responsive.css"/>
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -142,8 +142,8 @@
 	<h2>Langues</h2>
 <ul class="exp3">
 	<dd>
- 	<li><strong>Français:</strong> Bon Niveau</li>
-	<li><strong>Arabe:</strong> Langue maternelle</li>
+ 	<li><strong>Arabe:</strong> Langue maternelle</li>
+	<li><strong>Français:</strong> Bon Niveau</li>
 	<li><strong>Anglais:</strong>Bon Niveau</li>
 	</dd>
 </ul>
@@ -158,21 +158,21 @@
     <div class = "tooltip">
         Description brêve de HTML/CSS
 </div>
-    <div class="conteneur-barre2"><span class="barre c90"></span></div>
+    <div class="conteneur-barre2 etoile" id="HTML/CSS" ><i class="fa fa-star" ></i></div>
 </div>
 <div class="comp" onmouseover="show(this)" onmouseout="hide(this)">
     PHP / MySQL
     <div class = "tooltip">
         Description brêve de PHP / MySQL
 </div>
-    <div class="conteneur-barre2"><span class="barre c90"></span></div>
+<div class="conteneur-barre2 etoile" id="PHP/MySQL" ><i class="fa fa-star"></i></div>
 </div>
 <div class="comp" onmouseover="show(this)" onmouseout="hide(this)">
     JAVA
     <div class = "tooltip">
         Description brêve de JAVA
 </div>
-    <div class="conteneur-barre2"><span class="barre c80"></span></div>
+<div class="conteneur-barre2 etoile" id="JAVA" ><i class="fa fa-star"></i></div>
 
 </div>
 <div class="comp" onmouseover="show(this)" onmouseout="hide(this)">
@@ -180,7 +180,7 @@
     <div class = "tooltip">
         Description brêve de JavaScript
 </div>
-    <div class="conteneur-barre2"><span class="barre c70"></span></div>
+<div class="conteneur-barre2 etoile" id="JavaScript" ><i class="fa fa-star"></i></div>
 </div>
 <h3>Personnelles</h3>
 <div class="comp2">
@@ -215,8 +215,8 @@
 <script>
     /*-----1.1
 /*document.getElementById('details').onclick = function(e){	
- 	 		var elems = document.querySelectorAll(".desc");
-			[].forEach.call(elems, function(el) {
+ 	 		var elemts = document.querySelectorAll(".desc");
+			[].forEach.call(elemts, function(el) {
     			el.className = el.className.replace("desc", "");
 			});
 		}*/
@@ -229,8 +229,8 @@
 
 		for (var i = 0; i < elements.length; i++) {
  				elements[i].addEventListener('click', function(e){
-				var elems = document.querySelectorAll(".descyes");
-					[].forEach.call(elems, function(el) {
+				var elemts = document.querySelectorAll(".descyes");
+					[].forEach.call(elemts, function(el) {
     				el.className = el.className.replace("descyes", "desc");
 				});
  	 			var a =  this.parentElement.parentElement;
@@ -243,16 +243,16 @@
 
 		for (var i = 0; i < elements.length; i++) {
  				elements[i].addEventListener('click', function(e){
-				var elems = document.querySelectorAll(".toggle-content");
+				var elemts = document.querySelectorAll(".toggle-content");
 				
-					[].forEach.call(elems, function(elem) {
-						if (elem.classList.contains('is-visible')) {
-							elem.style.height = elem.scrollHeight + 'px';
+					[].forEach.call(elemts, function(elems) {
+						if (elems.classList.contains('is-visible')) {
+							elems.style.height = elems.scrollHeight + 'px';
     				window.setTimeout(function () {
-						elem.style.height = '0';
+						elems.style.height = '0';
 					}, 1);
 					window.setTimeout(function () {
-					elem.classList.remove('is-visible');
+					elems.classList.remove('is-visible');
 					}, 350);
 				}
 				});
@@ -270,14 +270,26 @@
 
 		}
 
-/*Exo2*/
-        function show (elem) {  
-			elem.closest("div").getElementsByTagName("div")[0].style.display="block";
+/*Exercice2*/
+        function show (elems) {  
+			elems.closest("div").getElementsByTagName("div")[0].style.display="block";
     	
 		}
-		function hide (elem) { 
-   			elem.closest("div").getElementsByTagName("div")[0].style.display=""; 
+		function hide (elems) { 
+   			elems.closest("div").getElementsByTagName("div")[0].style.display=""; 
 		}
-		
+	/*Exercice3*/	
+        var competence = {"HTML/CSS": 4,"PHP/MySQL":3, JAVA: 4, JavaScript: 4};
+    var elems = document.querySelectorAll(".etoile");
+    [].forEach.call(elems, function (elem) {
+                var n = competence[elem.attributes.id.value];
+                var etoile = '';
+                console.log(competence[elem.attributes.id.value]);
+                for (var i = 0; i < n; i++) {
+                  
+                  etoile+= '<i class="fa fa-star"> </i>';
+                }
+                elem.innerHTML = etoile;
+            });
    </script>
 </html>
