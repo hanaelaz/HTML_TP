@@ -23,11 +23,10 @@ h1{
 }
 
 header #right-item{
-    float: right;
+	float: right;
 }
 header #left-item{
-    float: left;
-    
+	float: left;
 
 }
 img {
@@ -52,7 +51,6 @@ header {
     padding-left: 20px;
     margin-right: auto;
     background-color: #E8F6F3;
-    
 }
 header h1{
     margin: auto;
