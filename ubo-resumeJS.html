@@ -17,6 +17,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+
+
 </head>
 
 <body>
@@ -57,7 +60,7 @@
     <div class="exp-desc">
         <p> Université de Bretagne Occidentale </p>
         </br>
-        <span class="toggle-content show-slow" >
+        <span class="toggle-content show-slow color" >
             Ce parcours de Master propose une mobilité de formation en Master 2ème année auprès des étudiants marocains de 1ère année de Master Informatique ou de 4ème année d’Ecole d’ingénieur
         </span>
     </div>
@@ -78,8 +81,8 @@
     <div class="exp-desc">
         <p>Ecole Nationale des Sciences Appliquées de Tanger</p>
     </br>
-    <span class="toggle-content show-slow"  >
-        cette filière forme des ingénieurs capables d’intervenir dans l’étude de projets, le développement de logiciels, la maîtrise de la conception, de la programmation et du test des logiciels, la gestion de centres informatiques, l’administration de réseaux et de base de données.    </span>
+    <span class="toggle-content show-slow color" >
+        Cette filière forme des ingénieurs capables d’intervenir dans l’étude de projets, le développement de logiciels, la maîtrise de la conception, de la programmation et du test des logiciels, la gestion de centres informatiques, l’administration de réseaux et de base de données.    </span>
     </div>
 </div>  
 </dd>
@@ -96,7 +99,7 @@
     </div>
     <div class="exp-desc">
         <p>Ecole Nationale des Sciences Appliquées de Tanger</p>
-        <span class="toggle-content show-slow"  >
+        <span class="toggle-content show-slow color"  >
             Les Années Préparatoires ont pour objectif de faire passer chaque élève du statut de lycéen à celui de futur ingénieur.        </span>
     </div>
 </div>
@@ -113,7 +116,7 @@
     </div>
     <div class="exp-desc">
         <p>Lycée Mohammed El Farih de Tanger      </p>
-        <span class="toggle-content show-slow"  >
+        <span class="toggle-content show-slow color"  >
             Le bac sciences physiques est l’une des branches que peut choisir un élève au lycée après la 1ère année bac sciences expérimentales. Il s’agit d’un baccalauréat spécialisé en physique qui permet aux élèves d’acquérir un maximum de compétences dans ce domaine.        </span>
     </div>
 </div>
@@ -183,21 +186,32 @@
 <div class="conteneur-barre2 etoile" id="JavaScript" ><i class="fa fa-star"></i></div>
 </div>
 <h3>Personnelles</h3>
-<div class="comp2">
-    <p>Créativité</p>
-    <p>90%</p>
-    <div class="conteneur-barre2"><span class="barre c90"></span></div>
-</div>
-<div class="comp2">
-    <p>Sérieusse</p>
-    <p>95%</p>
-    <div class="conteneur-barre2"><span class="barre c95"></span></div>
-</div>
-<div class="comp2">
-    <p>Adaptation</p>
-    <p>85%</p>
-    <div class="conteneur-barre2"><span class="barre c85"></span></div>
-</div>
+
+<!-- Exercice 3 les competences sur forme histograme-->
+<div class="cont" style="display: flex;">
+    <div class="verticale" style="margin-right:4px ;"></div>
+    <div class="vert" style="display: flex; " >
+   
+        <script>
+            var tab=['Créativité','Serieusse','Adaptation'];
+    var table=[4,5,4];
+            for( var i=0;i< table.length;i++){
+                document.write("<div style='width:5vw;margin-right:1vw'>");
+            for( j=0;j<table[i];j++){
+                
+               
+                document.write("<div class='caro' style='width: 4vw;height: 6vw; background-color: #4B8 ;' ></div>");
+
+                  
+            }
+
+            document.write("<p style='font-size:1.5vw;transform:rotate(180deg);'>"+tab[i]+"</p></div>");
+        }
+         
+        </script>
+    </div>
+    </div>
+    <div class="horizontale"></div>
 
 </section>
 <hr>
@@ -213,7 +227,8 @@
 
 </body>
 <script>
-    /*-----1.1
+    
+   /*-----1.1
 /*document.getElementById('details').onclick = function(e){	
  	 		var elemts = document.querySelectorAll(".desc");
 			[].forEach.call(elemts, function(el) {
