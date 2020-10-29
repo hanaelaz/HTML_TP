@@ -153,21 +153,33 @@
 <section>
 <h2>Compétences</h2>
 <h3>Informatiques</h3>
-<div class="comp">
-    <p>HTML / CSS</p>
+<div class="comp" onmouseover="show(this)" onmouseout="hide(this)">
+    HTML / CSS
+    <div class = "tooltip">
+        Description brêve de HTML/CSS
+</div>
     <div class="conteneur-barre2"><span class="barre c90"></span></div>
 </div>
-<div class="comp">
-    <p>PHP / MySQL</p>
+<div class="comp" onmouseover="show(this)" onmouseout="hide(this)">
+    PHP / MySQL
+    <div class = "tooltip">
+        Description brêve de PHP / MySQL
+</div>
     <div class="conteneur-barre2"><span class="barre c90"></span></div>
 </div>
-<div class="comp">
-    <p>JAVA</p>
+<div class="comp" onmouseover="show(this)" onmouseout="hide(this)">
+    JAVA
+    <div class = "tooltip">
+        Description brêve de JAVA
+</div>
     <div class="conteneur-barre2"><span class="barre c80"></span></div>
 
 </div>
-<div class="comp">
-    <p>JavaScript</p>
+<div class="comp" onmouseover="show(this)" onmouseout="hide(this)">
+    JavaScript
+    <div class = "tooltip">
+        Description brêve de JavaScript
+</div>
     <div class="conteneur-barre2"><span class="barre c70"></span></div>
 </div>
 <h3>Personnelles</h3>
@@ -256,6 +268,15 @@
 				}, 350);
  			   }, false);
 
+		}
+
+/*Exo2*/
+        function show (elem) {  
+			elem.closest("div").getElementsByTagName("div")[0].style.display="block";
+    	
+		}
+		function hide (elem) { 
+   			elem.closest("div").getElementsByTagName("div")[0].style.display=""; 
 		}
 		
    </script>
